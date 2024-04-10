@@ -1945,3 +1945,157 @@ padding: 1em 0 1em 2em;
                 }
 
 }
+
+/* Section and Article */
+section.special, article.special {
+    text-align: center;
+}
+
+header p {
+    color: #999;
+    font-size: 1.25em;
+    position: relative;
+    margin-top: -1.25em;
+    margin-bottom: 2.25em;
+}
+
+header.major {
+    text-align: center;
+    margin: 0 0 2em 0;
+}
+
+    header.major h2 {
+        font-size: 2.25em;
+    }
+
+    header.major p {
+        position: relative;
+        border-top: solid 1px #e0e0e0;
+        padding: 1em 0 0 0;
+        margin: 0;
+        top: -1em;
+        font-size: 1.5em;
+        letter-spacing: -0.025em;
+    }
+
+footer {
+    margin: 0 0 3em 0;
+}
+
+    footer > :last-child {
+        margin-bottom: 0;
+    }
+
+    footer.major {
+        padding-top: 3em;
+    }
+
+/* Form */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+    background: #fff;
+    border: solid 1px #e0e0e0;
+    border-radius: 5px;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.75em;
+    text-decoration: none;
+    width: 100%;
+}
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        border-color: #37c0fb;
+    }
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    line-height: 1em;
+}
+
+label {
+    display: block;
+    color: inherit;
+    font-weight: 600;
+    line-height: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    position: relative;
+    top: 3px;
+}
+
+:-moz-placeholder {
+    color: #999;
+}
+
+::-moz-placeholder {
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+/* Image */
+
+.image {
+    border: 0;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+}
+
+    .image img {
+        display: block;
+        border-radius: 5px;
+    }
+
+    .image.left {
+        display: block;
+        float: left;
+        margin: 0 2em 2em 0;
+        position: relative;
+        top: 0.25em;
+    }
+
+        .image.left img {
+            display: block;
+            width: 100%;
+        }
+
+    .image.fit {
+        display: block;
+    }
+
+        .image.fit img {
+            display: block;
+            width: 100%;
+        }
+
+    .image.featured {
+        display: block;
+        margin: 0 0 2em 0;
+    }
+
+        .image.featured img {
+            display: block;
+            width: 100%;
+        }
