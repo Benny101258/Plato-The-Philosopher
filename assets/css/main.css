@@ -121,7 +121,7 @@ em, i {
 font-style: italic;
 }
 
-p, ul, ol, dl, table, blockquote {
+p, ul, ol {
 margin: 0 0 2em 0;
 }
 
@@ -150,30 +150,6 @@ letter-spacing: -0.025em;
 h3 {
 font-size: 1.2em;
 letter-spacing: -0.025em;
-}
-
-sub {
-font-size: 0.8em;
-position: relative;
-top: 0.5em;
-}
-
-sup {
-font-size: 0.8em;
-position: relative;
-top: -0.5em;
-}
-
-hr {
-border-top: solid 1px #e0e0e0;
-border: 0;
-margin-bottom: 1.5em;
-}
-
-blockquote {
-border-left: solid 0.5em #e0e0e0;
-font-style: italic;
-padding: 1em 0 1em 2em;
 }
 
 /* Container */
@@ -2158,6 +2134,27 @@ label {
             font-size: 36px;
         }
 
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+    ul.icons li {
+        display: inline-block;
+        line-height: 1em;
+        padding-left: 1.5em;
+    }
+
+        ul.icons li:first-child {
+            padding-left: 0;
+        }
+
+        ul.icons li a, ul.icons li span {
+            font-size: 2em;
+            border: 0;
+        }
+
 /* Lists */
 
 ol {
@@ -2190,28 +2187,6 @@ ul.links {
         padding-left: 0;
     }
 
-/* Icons */
-
-ul.icons {
-    cursor: default;
-    list-style: none;
-    padding-left: 0;
-}
-
-    ul.icons li {
-        display: inline-block;
-        line-height: 1em;
-        padding-left: 1.5em;
-    }
-
-        ul.icons li:first-child {
-            padding-left: 0;
-        }
-
-        ul.icons li a, ul.icons li span {
-            font-size: 2em;
-            border: 0;
-        }
 
 /* Menu */
 
@@ -2358,8 +2333,6 @@ ul.actions {
 /* Button */
 
 input[type="submit"],
-input[type="reset"],
-input[type="button"],
 button,
 .button {
     -moz-appearance: none;
@@ -2390,8 +2363,6 @@ button,
 }
 
     input[type="submit"]:hover,
-    input[type="reset"]:hover,
-    input[type="button"]:hover,
     button:hover,
     .button:hover {
         background-color: #50c8fc;
@@ -2399,8 +2370,6 @@ button,
     }
 
     input[type="submit"]:active,
-    input[type="reset"]:active,
-    input[type="button"]:active,
     button:active,
     .button:active {
         background-color: #1eb8fb;
@@ -2408,8 +2377,6 @@ button,
     }
 
     input[type="submit"].alt,
-    input[type="reset"].alt,
-    input[type="button"].alt,
     button.alt,
     .button.alt {
         background-color: #555555;
@@ -2417,40 +2384,30 @@ button,
     }
 
         input[type="submit"].alt:hover,
-        input[type="reset"].alt:hover,
-        input[type="button"].alt:hover,
         button.alt:hover,
         .button.alt:hover {
             background-color: #626262;
         }
 
         input[type="submit"].alt:active,
-        input[type="reset"].alt:active,
-        input[type="button"].alt:active,
         button.alt:active,
         .button.alt:active {
             background-color: #484848;
         }
 
     input[type="submit"].icon:before,
-    input[type="reset"].icon:before,
-    input[type="button"].icon:before,
     button.icon:before,
     .button.icon:before {
         margin-right: 0.5em;
     }
 
     input[type="submit"].fit,
-    input[type="reset"].fit,
-    input[type="button"].fit,
     button.fit,
     .button.fit {
         width: 100%;
     }
 
     input[type="submit"].small,
-    input[type="reset"].small,
-    input[type="button"].small,
     button.small,
     .button.small {
         font-size: 0.8em;
@@ -2647,31 +2604,6 @@ button,
         background: #fff;
     }
 
-    .wrapper.style2 {
-        background-color: #fff;
-        background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
-        background-position: top left,						bottom left,					top left;
-        background-size: 100% 6em,						100% 6em,						auto;
-        background-repeat: no-repeat,						no-repeat,						repeat;
-    }
-
-    .wrapper.style3 {
-        background-color: #37c0fb;
-        background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-        background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-        background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-        background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-        color: #fff;
-    }
-
-        .wrapper.style3 .button {
-            background: #fff;
-            color: #474747;
-        }
-
-            .wrapper.style3 .button:hover {
-                color: #37c0fb !important;
-            }
 
 /* Footer */
 
@@ -2877,9 +2809,7 @@ button,
 
     /* Header */
 
-        #header {
-            display: none;
-        }
+        
 
     /* Banner */
 
@@ -2888,12 +2818,18 @@ button,
         }
 
             #banner header h2 {
-                display: block;
+                display: inline;
             }
 
             #banner header .button {
                 margin: 1em 0 0 0;
             }
+
+/* Sidebar */
+
+#sidebar, #sidebar1, #sidebar2  {
+    display: none;  
+}
 
 /* Footer */
 
@@ -2933,157 +2869,6 @@ button,
     padding-top: 44px;
 }
 
-#titleBar {
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transition: -moz-transform 0.5s ease;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    -ms-transition: -ms-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    display: block;
-    height: 44px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10001;
-    background-color: #333;
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-    height: 44px;
-    line-height: 44px;
-    box-shadow: 0 4px 0 0 #37c0fb;
-}
-
-    #titleBar .title {
-        display: block;
-        position: relative;
-        font-weight: 600;
-        text-align: center;
-        color: #fff;
-        z-index: 1;
-    }
-
-        #titleBar .title em {
-            font-style: normal;
-            font-weight: 300;
-        }
-
-    #titleBar .toggle {
-        text-decoration: none;
-        border: 0;
-        height: 60px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 80px;
-        z-index: 2;
-    }
-
-        #titleBar .toggle:before {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-            text-transform: none !important;
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-        }
-
-        #titleBar .toggle:before {
-            content: '\f0c9';
-            display: block;
-            height: 44px;
-            line-height: inherit;
-            text-align: center;
-            width: 44px;
-            color: #fff;
-            opacity: 0.5;
-        }
-
-        #titleBar .toggle:active:before {
-            opacity: 0.75;
-        }
-
-#navPanel {
-    background-color: #1f1f1f;
-    box-shadow: inset -1px 0 3px 0 rgba(0, 0, 0, 0.5);
-    background-image: -moz-linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
-    background-image: -ms-linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
-    background-image: linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transform: translateX(-275px);
-    -webkit-transform: translateX(-275px);
-    -ms-transform: translateX(-275px);
-    transform: translateX(-275px);
-    -moz-transition: -moz-transform 0.5s ease;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    -ms-transition: -ms-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    display: block;
-    height: 100%;
-    left: 0;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    width: 275px;
-    z-index: 10002;
-}
-
-    #navPanel .link {
-        border-bottom: 0;
-        border-top: solid 1px rgba(255, 255, 255, 0.05);
-        color: #888;
-        display: block;
-        height: 48px;
-        line-height: 48px;
-        padding: 0 1em 0 1em;
-        text-decoration: none;
-    }
-
-        #navPanel .link:first-child {
-            border-top: 0;
-        }
-
-        #navPanel .link.depth-0 {
-            color: #fff;
-        }
-
-        #navPanel .link .indent-1 {
-            display: inline-block;
-            width: 1em;
-        }
-
-        #navPanel .link .indent-2 {
-            display: inline-block;
-            width: 2em;
-        }
-
-        #navPanel .link .indent-3 {
-            display: inline-block;
-            width: 3em;
-        }
-
-        #navPanel .link .indent-4 {
-            display: inline-block;
-            width: 4em;
-        }
-
-        #navPanel .link .indent-5 {
-            display: inline-block;
-            width: 5em;
-        }
 
 body.navPanel-visible #page-wrapper {
     -moz-transform: translateX(275px);
@@ -3099,12 +2884,6 @@ body.navPanel-visible #titleBar {
     transform: translateX(275px);
 }
 
-body.navPanel-visible #navPanel {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-}
 
 }
 
@@ -3171,6 +2950,11 @@ ul.menu li {
 .wrapper {
     padding: 2em 0 1px 0;
 }
+/* Sidebar */
+
+#sidebar, #sidebar1, #sidebar2  {
+    display: none;  
+}
 
 }
 
@@ -3194,8 +2978,6 @@ ul.menu li {
 /* Button */
 
 input[type="submit"],
-input[type="reset"],
-input[type="button"],
 button,
 .button {
     width: 100%;
@@ -3230,6 +3012,12 @@ button,
 
 .wrapper {
     padding: 2em 20px 1px 20px;
+}
+
+/* Sidebar */
+
+#sidebar, #sidebar1, #sidebar2  {
+    display: none;  
 }
 
 /* Footer */
