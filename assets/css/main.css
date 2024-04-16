@@ -82,12 +82,8 @@ a {
     border-bottom: dotted 1px;
 }
 a:hover {
-    color: #37c0fb;
+    color: #37fb61;
     border-bottom-color: transparent;
-}
-
-strong, b {
-font-weight: 600;
 }
 
 em, i {
@@ -2481,7 +2477,7 @@ button,
             }
 
             #nav > ul > li:hover a {
-                color: #fff;
+                color: #db1717;
             }
 
             #nav > ul > li.current {
@@ -2590,7 +2586,7 @@ button,
     }
 
         #footer a:hover {
-            color: #37c0fb;
+            color: #fb3737;
             border-bottom-color: transparent;
         }
 
@@ -2610,14 +2606,7 @@ button,
             #footer .icons a:hover {
                 color: #474747;
             }
-
-    #footer .copyright {
-        color: #999;
-        margin-top: 1.5em;
-        text-align: center;
-        font-size: 0.9em;
-    }
-
+            
 /* Wide */
 
 @media screen and (max-width: 1680px) {
